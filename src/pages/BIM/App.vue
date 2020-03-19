@@ -17,8 +17,8 @@
 import { Component, Vue, Prop, Watch, Emit } from "vue-property-decorator";
 // import * as $ from "jquery";
 
-// import jquery from "jquery";
-// const $: JQueryStatic = jquery;
+import jquery from "jquery";
+const $: JQueryStatic = jquery;
 
 @Component
 export default class App extends Vue {
