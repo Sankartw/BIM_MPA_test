@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>BIM 3D建築資訊服務圖台</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <script src="https://www.handbim.com/bimVR/bimOBJ-CTM-opt.js"></script> -->
+    <script src="BIM.js"></script>
+    <script>
+        $(function () {
+            // pass 取得 來自 API 的 Case 案件資訊
+            // id  取得來自 API的 Case 案件資訊
+            // id1 樓層編碼來自 API的 Building 棟樓資訊，若整棟，則id1:"000"
+            $(".bimobjall-ctm").BimObjCtm({
+                pass: "CaRo1c1ONV6J2m71lWCDRfc13egdbB25bv%2fvSgcA8S5Vdu3BkRJc%3d",
+                id: "gEfqzBtv4NHH0krTngFtQwO646VvHr_01",
+                id1: "A002"
+            }); //指定樓層
+        });
+        setTimeout(() => {
+            $(".bimobjall-ctm").BimObjCtm({
+                pass: "CaRo1c1ONV6J2m71lWCDRfc13egdbB25bv%2fvSgcA8S5Vdu3BkRJc%3d",
+                id: "gEfqzBtv4NHH0krTngFtQwO646VvHr_01",
+                id1: "A009"
+            }); //指定樓層
+        }, 10000);
+    </script>
+    <style>
+        .bimobjall-ctm {
+            width: 80%;
+            height: 800px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="bimobjall-ctm"
+    style="top:30px; left:30px;"></div>
+  <div id="app"></div>
+</body>
+
+</html>

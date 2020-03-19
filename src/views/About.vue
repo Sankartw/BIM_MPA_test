@@ -1,5 +1,5 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <div class="bimobjall-ctm" style="top:30px; left:30px;" />
   </div>
 </template>

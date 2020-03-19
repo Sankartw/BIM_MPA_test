@@ -1,7 +1,10 @@
 {
   "compilerOptions": {
     "target": "esnext",
-    "module": "esnext",
+    "module": "esnext", 
+    "resolveJsonModule": true,
+    "allowJs": true,
+    // "module": "commonjs",resolveJsonModule 原來是 沒有開放讓 json可以被 import; zh_tw不能import;
     "strict": true,
     "jsx": "preserve",
     "importHelpers": true,
@@ -12,7 +15,12 @@
     "sourceMap": true,
     "baseUrl": ".",
     "types": [
-      "webpack-env"
+      "webpack-env",
+      "vuetify"
+    ],
+    "typeRoots": [
+      "./node_modules/@types",
+      "./node_modules/vuetify/types"
     ],
     "paths": {
       "@/*": [
